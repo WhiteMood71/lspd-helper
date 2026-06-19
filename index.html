@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lois Miranda & Codes Police</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="darkModeToggle" class="dark-mode-toggle" title="Mode sombre">🌙</button>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <div class="card">
+                <h2>Fréquence Radio</h2>
+                <ul>
+                    <li><strong>13</strong> : Opération Commune</li>
+                    <li><strong>15</strong> : BSCO</li>
+                    <li><strong>20</strong> : LSPD</li>
+                    <li><strong>23</strong> : Interrogatoire</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Codes Patrouille</h2>
+                <ul>
+                    <li><strong>Lincoln</strong> : Seul en véhicule</li>
+                    <li><strong>Adam</strong> : Patrouille à deux</li>
+                    <li><strong>Tango</strong> : Patrouille à trois</li>
+                    <li><strong>X-Ray</strong> : Patrouille à quatre</li>
+                    <li><strong>Mary</strong> : Patrouille motorisée</li>
+                    <li><strong>Henry</strong> : Patrouille Héliportée</li>
+                    <li><strong>David</strong> : Patrouille SWAT</li>
+                    <li><strong>Sierra</strong> : Patrouille Rapide</li>
+                    <li><strong>Super Sierra</strong> : Patrouille Rapide +</li>
+                    <li><strong>Roméo</strong> : Patrouille banalisée</li>
+                    <li><strong>Victor</strong> : Patrouille Vélo</li>
+                    <li><strong>William</strong> : Véhicule GIU/SCU/Banalisée</li>
+                    <li><strong>Hubert</strong> : Patrouille nautique</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Codes Alphabétiques</h2>
+                <div class="alphabet-grid">
+                    <div><strong>A</strong> - Alpha</div>
+                    <div><strong>B</strong> - Bravo</div>
+                    <div><strong>C</strong> - Charlie</div>
+                    <div><strong>D</strong> - Delta</div>
+                    <div><strong>E</strong> - Echo</div>
+                    <div><strong>F</strong> - Foxtrot</div>
+                    <div><strong>G</strong> - Golf</div>
+                    <div><strong>H</strong> - Hotel</div>
+                    <div><strong>I</strong> - India</div>
+                    <div><strong>J</strong> - Juliet</div>
+                    <div><strong>K</strong> - Kilo</div>
+                    <div><strong>L</strong> - Lima</div>
+                    <div><strong>M</strong> - Mike</div>
+                    <div><strong>N</strong> - November</div>
+                    <div><strong>O</strong> - Oscar</div>
+                    <div><strong>P</strong> - Papa</div>
+                    <div><strong>Q</strong> - Quebec</div>
+                    <div><strong>R</strong> - Romeo</div>
+                    <div><strong>S</strong> - Sierra</div>
+                    <div><strong>T</strong> - Tango</div>
+                    <div><strong>U</strong> - Uniform</div>
+                    <div><strong>V</strong> - Victor</div>
+                    <div><strong>W</strong> - Whiskey</div>
+                    <div><strong>X</strong> - X-ray</div>
+                    <div><strong>Y</strong> - Yankee</div>
+                    <div><strong>Z</strong> - Zulu</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Middle Column (Form) -->
+        <div class="middle-column">
+            <div class="card form-card">
+                <h2>Informations Joueur</h2>
+                <form id="playerForm">
+                    <div class="form-group">
+                        <label for="playerName">Nom du joueur</label>
+                        <input type="text" id="playerName" placeholder="Nom Prenom" value="Nom Prenom">
+                    </div>
+
+                    <div class="form-group">
+                        <label><strong>Genre :</strong></label>
+                        <select id="genre">
+                            <option value="Monsieur" selected>Monsieur</option>
+                            <option value="Madame">Madame</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label><strong>Délit :</strong></label>
+                        <select id="delit">
+                            <option value="Délit mineur" selected>Délit mineur</option>
+                            <option value="Délit majeur">Délit majeur</option>
+                            <option value="Crime">Crime</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">Appliquer</button>
+                        <button type="reset" class="btn btn-secondary">Reset</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card info-card">
+                <div id="mirandaInfo"></div>
+            </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="card">
+                <h2>Codes Police</h2>
+                
+                <div class="category-header">
+                    <strong>Codes</strong>
+                </div>
+                <ul>
+                    <li><strong>Code 1</strong> : Rien</li>
+                    <li><strong>Code 2</strong> : Gyrophare</li>
+                    <li><strong>Code 3</strong> : Gyro + Sirène</li>
+                    <li><strong>Code 4</strong> : Fin d'intervention</li>
+                    <li><strong>Code 6</strong> : Investigation</li>
+                </ul>
+                <button id="sortBtn" class="btn btn-sort">Trier par catégorie</button>
+
+                <div id="codesContainer">
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes de Service et de Position</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-6</strong> : Pause de service</li>
+                            <li><strong>10-7</strong> : Début de service</li>
+                            <li><strong>10-8</strong> : Fin de service</li>
+                            <li><strong>10-13</strong> : Reprise de patrouille</li>
+                            <li><strong>10-17</strong> : En direction de</li>
+                            <li><strong>10-18</strong> : En direction de l'hôpital</li>
+                            <li><strong>10-20</strong> : Position actuelle</li>
+                            <li><strong>10-19</strong> : Retour au poste</li>
+                            <li><strong>10-23</strong> : Arrivée sur zone</li>
+                            <li><strong>10-31</strong> : Course poursuite</li>
+                            <li><strong>10-38</strong> : Contrôle en cours</li>
+                            <li><strong>10-41</strong> : Début de patrouille</li>
+                        </ul>
+                    </div>
+
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes d'Interrogation et d'Enquête</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-9</strong> : Interrogatoire en cours</li>
+                            <li><strong>10-4</strong> : Message reçu / Affirmatif</li>
+                            <li><strong>10-5</strong> : Négatif</li>
+                        </ul>
+                    </div>
+
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes d'Urgence et de Sécurité</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-50</strong> : Accident de la route</li>
+                            <li><strong>10-52</strong> : Demande d'EMS</li>
+                            <li><strong>10-60</strong> : Cambriolage en cours</li>
+                            <li><strong>10-70</strong> : Braquage en cours</li>
+                            <li><strong>10-71</strong> : Fusillade/Tir</li>
+                            <li><strong>10-75</strong> : Prise d'informations / Sécurisation de zone</li>
+                            <li><strong>10-80</strong> : Prise d'otage en cours</li>
+                            <li><strong>10-85</strong> : Barrage en cours</li>
+                        </ul>
+                    </div>
+
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes de Silence et de Contrôle</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-81</strong> : Silence radio</li>
+                            <li><strong>10-300</strong> : Autorisation d'abattre</li>
+                        </ul>
+                    </div>
+
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes Humoristiques ou Abusifs</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-800</strong> : T.I.G express (troller)</li>
+                        </ul>
+                    </div>
+
+                    <div class="codes-section">
+                        <div class="category-header">
+                            <strong>Codes de Récapitulatif et Divers</strong>
+                        </div>
+                        <ul>
+                            <li><strong>10-90</strong> : Récapitulatif</li>
+                            <li><strong>10-200</strong> : Vente de drogues</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
